@@ -1,56 +1,6 @@
-<h1>Criando projeto <span  class="wave">
-<span>L</span><span>a</span><span>r</span><span>a</span><span>v</span><span>e</span><span>l</span>
+# Criando projeto Laravel
 
-</span></h1>
 
-  
-
-<style>
-
-.wave  span {
-
-display: inline-block;
-
-animation: wave-animation 3s  infinite;
-
-}
-
-  
-
-@keyframes  wave-animation {
-
-0% { transform: translateY(0); }
-
-25% { transform: translateY(-4px); }
-
-50% { transform: translateY(0); }
-
-75% { transform: translateY(4px); }
-
-100% { transform: translateY(0); }
-
-}
-
-  
-
-.wave  span:nth-child(1) { animation-delay: 0s; }
-
-.wave  span:nth-child(2) { animation-delay: 0.10s; }
-
-.wave  span:nth-child(3) { animation-delay: 0.14s; }
-
-.wave  span:nth-child(4) { animation-delay: 0.18s; }
-
-.wave  span:nth-child(5) { animation-delay: 0.22s; }
-
-.wave  span:nth-child(6) { animation-delay: 0.26s; }
-
-.wave  span:nth-child(7) { animation-delay: 0.30s; }
-
-</style>
-
-  
-  
 
 ## *Dia 11/08/2025 - Aula 02 de Programação Web III*
 
@@ -89,7 +39,7 @@ Este comando instalará o PHP, o Composer e o Instalador do Laravel na sua máqu
 
 Com tudo instalado, execute o [XAMPP](https://www.apachefriends.org/pt_br/index.html) e ative o *Apache* e o *MYSQL*. Depois disso, adicione a pasta onde seu projeto será criado em *htdocs* (pasta localizada no xampp, geralmente 'C:\xampp\htdocs') e abra o terminal de dentro desta pasta.
 
-Para criar o projeto, basta usar o comando *Laravel new <span  style="color:green">nome-da-pasta</span>*, escolher seu *Starter kit* (conjunto de funcionalidades básicas que ajudam em comandos de autenticação, gerenciamento de usuários e configurações iniciais) e depois o Banco de Dados que o projeto utilizará.
+Para criar o projeto, basta usar o comando *Laravel new nome-da-pasta*, escolher seu *Starter kit* (conjunto de funcionalidades básicas que ajudam em comandos de autenticação, gerenciamento de usuários e configurações iniciais) e depois o Banco de Dados que o projeto utilizará.
 
 E é isso! A pasta do seu projeto inicial já está criada e inicialmente configurada! Pode começar a desenvolver agora
 
