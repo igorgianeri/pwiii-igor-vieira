@@ -83,3 +83,27 @@ São 8 passos para instalar as dependências do projeto ao cloná-lo do github.
 6. O comando *php artisan key:generate* gera uma chave de criptografia para o projeto
 7. O comando *php artisan migrate* realiza a *Migration*, um processo que transforma um banco de dados em uma outra linguagem. Para criar o banco de dados a partir dos comandos dessas Migrations deve-se utilizar o comando do artisan.
 8. O comando *composer run dev* inicia o servidor do projeto e você poderá acessá-lo pelo endereço *localhost:8000*
+
+
+# Aprendendo sobre rotas e tailwind
+
+## *Dia 18/08/2025 - Aula 03 de Programação Web III*
+
+## Tailwind no laravel 
+Arquivo '*welcome.blade.php*' é o "index", a tela exibida por padrão no localhost.
+	Fica em:  '*resources/views/welcome.blade.php*'
+
+Para o Tailwind funcionar nele basta importar o comando
+
+    @vite('resources/css/app.css')
+
+## Rotas
+
+O sistema de conexão de rotas no Laravel fica localizado no arquivo *'routes/web.php'* através do comando:
+
+    Route::get('/-endereçoescolhido-, function() {
+	    return view('nomedaview');
+	}
+
+
+ 
