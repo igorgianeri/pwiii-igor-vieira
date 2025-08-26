@@ -1,3 +1,4 @@
+
 # Criando projeto Laravel
 
 
@@ -104,6 +105,121 @@ O sistema de conexão de rotas no Laravel fica localizado no arquivo *'routes/we
     Route::get('/-endereçoescolhido-, function() {
 	    return view('nomedaview');
 	}
+
+
+----------
+
+# Aprendendo sobre SQLite
+
+## _Dia 25/08/2025 - Aula 04 de Programação Web III_
+
+## SQLite no Laravel
+
+O Laravel também é compatível com o banco de dados **SQLite**, que é uma alternativa leve, prática e sem necessidade de servidor para projetos menores ou para testes locais.
+
+Para utilizar o SQLite no Laravel, é necessário instalar uma extensão no VS Code e configurar o ambiente corretamente.
+
+----------
+
+## Passo-a-Passo
+
+### - [ ] 1. Instalar a extensão SQLite no VS Code
+
+Para visualizar e editar bancos de dados SQLite diretamente pelo VS Code:
+
+1.  Abra o **VS Code**
+    
+2.  Vá em **Extensões** (ícone de quadrados no menu lateral esquerdo ou `Ctrl+Shift+X`)
+    
+3.  Pesquise por **SQLite** ou **SQLite Viewer**
+    
+4.  Instale uma das opções mais bem avaliadas, como a extensão "**SQLite Viewer**" ou "**SQLite Explorer**"
+    
+5.  Após instalada, um novo ícone (normalmente com um banco de dados) aparecerá na barra lateral esquerda
+    
+
+Essa extensão permite abrir, visualizar e editar arquivos `.sqlite` de forma gráfica.
+
+----------
+
+### - [ ] 2. Criar um banco de dados SQLite
+
+1.  No terminal do seu projeto, navegue até a pasta `database`:
+    
+    `cd database` 
+    
+2.  Crie um novo arquivo com a extensão `.sqlite` (por exemplo `database.sqlite`):
+    
+    `touch database.sqlite` 
+    
+    > Em sistemas Windows, você pode usar:
+    
+    `New-Item database.sqlite` 
+    
+3.  Com o arquivo criado, abra o arquivo `.env` na raiz do projeto e altere as configurações do banco de dados para:
+    
+    `DB_CONNECTION=sqlite DB_DATABASE=/caminho/completo/para/seu/projeto/database/database.sqlite` 
+    
+    > Dica: Para projetos no XAMPP, o caminho pode ser algo como:
+    
+    `DB_DATABASE=C:/xampp/htdocs/nome-do-projeto/database/database.sqlite` 
+    
+4.  Após configurar, salve o `.env` e execute as _migrations_ com:
+    
+    `php artisan migrate` 
+    
+5.  Pronto! Seu projeto já está utilizando SQLite como banco de dados.
+    
+
+Agora você pode usar a extensão instalada para explorar o banco de dados graficamente, ver tabelas, adicionar dados e muito mais.
+
+----------
+
+Se quiser, posso também transformar isso em um PDF ou arquivo Markdown pronto para distribuição.
+
+##### Você disse:
+
+agora crie também uma query com diversos exemplos de buscas a se fazer na tabela Users, exclua a paret falando do artisan migrate (essa aprte foi executada antes). Refaça a parte do SQL apenas com informações de como usar isso dentro do VScode utilizando o CTRLP por exemplo
+
+###### O ChatGPT disse:
+
+Perfeito! Vamos completar sua documentação com uma seção dedicada ao uso do SQLite diretamente no **VS Code**, incluindo **consultas SQL na tabela `users`** (assumindo que ela já foi criada via migrations anteriormente).
+
+Seguindo o estilo do seu texto:
+
+----------
+
+# Consultando dados no SQLite pelo VS Code
+
+## _Dia 25/08/2025 - Aula 04 de Programação Web III_
+
+Depois de configurar o banco SQLite e rodar as migrations anteriormente, agora você pode **fazer consultas SQL diretamente dentro do VS Code**, utilizando a extensão SQLite instalada.
+
+----------
+
+## Acessando o banco de dados SQLite via VS Code
+
+### - [ ] 1. Abrir o banco de dados no VS Code
+
+1.  Com a extensão SQLite já instalada, vá até a barra lateral do VS Code e clique no ícone da extensão (geralmente com um banco ou símbolo de dados).
+    
+2.  Clique em **“Open Database”** e selecione o arquivo `database.sqlite` que está dentro da pasta `database` do seu projeto.
+    
+3.  Agora o banco de dados será exibido na lateral esquerda, com todas as tabelas visíveis.
+    
+
+----------
+
+### - [ ] 2. Executar consultas SQL com o atalho `Ctrl+P`
+
+1.  Pressione `Ctrl+P` no VS Code
+    
+2.  Digite `> SQLite: New Query` e selecione a opção
+    
+3.  Uma aba nova será aberta para que você possa digitar e executar comandos SQL diretamente no SQLite do seu projeto
+    
+4.  Certifique-se de selecionar o banco correto no canto superior direito da aba de query (caso você tenha mais de um aberto)
+
 
 
  
