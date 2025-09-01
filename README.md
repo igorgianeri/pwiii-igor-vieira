@@ -175,20 +175,6 @@ Agora você pode usar a extensão instalada para explorar o banco de dados grafi
 
 ----------
 
-Se quiser, posso também transformar isso em um PDF ou arquivo Markdown pronto para distribuição.
-
-##### Você disse:
-
-agora crie também uma query com diversos exemplos de buscas a se fazer na tabela Users, exclua a paret falando do artisan migrate (essa aprte foi executada antes). Refaça a parte do SQL apenas com informações de como usar isso dentro do VScode utilizando o CTRLP por exemplo
-
-###### O ChatGPT disse:
-
-Perfeito! Vamos completar sua documentação com uma seção dedicada ao uso do SQLite diretamente no **VS Code**, incluindo **consultas SQL na tabela `users`** (assumindo que ela já foi criada via migrations anteriormente).
-
-Seguindo o estilo do seu texto:
-
-----------
-
 # Consultando dados no SQLite pelo VS Code
 
 ## _Dia 25/08/2025 - Aula 04 de Programação Web III_
@@ -207,7 +193,6 @@ Depois de configurar o banco SQLite e rodar as migrations anteriormente, agora v
     
 3.  Agora o banco de dados será exibido na lateral esquerda, com todas as tabelas visíveis.
     
-
 ----------
 
 ### - [ ] 2. Executar consultas SQL com o atalho `Ctrl+P`
