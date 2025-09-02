@@ -175,6 +175,20 @@ Agora você pode usar a extensão instalada para explorar o banco de dados grafi
 
 ----------
 
+Se quiser, posso também transformar isso em um PDF ou arquivo Markdown pronto para distribuição.
+
+##### Você disse:
+
+agora crie também uma query com diversos exemplos de buscas a se fazer na tabela Users, exclua a paret falando do artisan migrate (essa aprte foi executada antes). Refaça a parte do SQL apenas com informações de como usar isso dentro do VScode utilizando o CTRLP por exemplo
+
+###### O ChatGPT disse:
+
+Perfeito! Vamos completar sua documentação com uma seção dedicada ao uso do SQLite diretamente no **VS Code**, incluindo **consultas SQL na tabela `users`** (assumindo que ela já foi criada via migrations anteriormente).
+
+Seguindo o estilo do seu texto:
+
+----------
+
 # Consultando dados no SQLite pelo VS Code
 
 ## _Dia 25/08/2025 - Aula 04 de Programação Web III_
@@ -193,6 +207,7 @@ Depois de configurar o banco SQLite e rodar as migrations anteriormente, agora v
     
 3.  Agora o banco de dados será exibido na lateral esquerda, com todas as tabelas visíveis.
     
+
 ----------
 
 ### - [ ] 2. Executar consultas SQL com o atalho `Ctrl+P`
@@ -205,6 +220,67 @@ Depois de configurar o banco SQLite e rodar as migrations anteriormente, agora v
     
 4.  Certifique-se de selecionar o banco correto no canto superior direito da aba de query (caso você tenha mais de um aberto)
 
+Tabela de usuário
+	-> Campo chamado "Alergias"
+Trocar colunas
+	-> Alter Table + nome da coluna + nome do campo
+FORMA NÃO PROFISSIONAL ^^^^^^
+	função "down" no migration realiza o rollback de uma modificação no banco de dados, podendo desfazer um erro facilmente
+	
+Comando pra criar uma migration
+
+    php artisan make:migration create_flights_table 
+
+"create_filghts_table" é um bom nome comercial
+create = criação
+flights = nome da tabela
+table = tabela
+
+Importações básicas de uma migration.
+
+use  Illuminate\Database\Migrations\Migration;
+
+use  Illuminate\Database\Schema\Blueprint;
+
+use  Illuminate\Support\Facades\Schema;
+
+    <?php
+    use  Illuminate\Database\Migrations\Migration; //importações básicas
+    use  Illuminate\Database\Schema\Blueprint;
+    use  Illuminate\Support\Facades\Schema;
+    
+    return  new  class  extends  Migration
+    {
+    /**
+    * Run the migrations.
+    */
+    public  function  up():  void
+    {
+    Schema::create('flights', function (Blueprint $table) { //Cria uma tabela chamada "flights"
+    $table->id(); //Algo padrão referente a qualquer dado de tabela
+    $table->string('name'); //string = texto
+    $table->string('airline');
+    $table->timestamps(); //data e hora
+    });
+    }
+    /**
+    * Reverse the migrations.
+    */
+    public  function  down():  void //função down (deletando a tabela "flights")
+    {
+    Schema::drop('flights');
+    }
+    };
+
+schema se refere a tabela
+
+->  primary () = torna algo uma "chave primária" - ponto de referência para outras tabelas
+Os ID por padrão ja vem com "Primary" e "Auto-incremento", então não é necessário adicionar
+
+nome para criar uma tabela que será modificada:
+alter-add-campo-user-table
 
 
- 
+
+
+
